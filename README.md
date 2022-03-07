@@ -13,3 +13,8 @@
 - To compile the Electron app into Windows, Mac and Linux app
 
 `npm run make`
+
+TO DO :
+
+- Change icon
+- Change app title
