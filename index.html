@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./icons/icofont.min.css" />
+    <link rel="preload" href="renderer.js" as="script" />
+    <title>Color Picker</title>
+  </head>
+  <body>
+    <section id="options">
+      <div>
+        <label for="options--color-format">Color format</label>
+        <select name="options--color-format" id="options--color-format">
+          <option value="hex">Hexadecimal</option>
+          <option value="rgb">RGB</option>
+          <option value="hsl">HSL</option>
+          <option value="hsv">HSV</option>
+        </select>
+      </div>
+      <div>
+        <label id="theme-switch">
+          <input type="checkbox" name="" id="toggle-dark-mode" />
+          <span id="switch"></span>
+        </label>
+      </div>
+    </section>
+    <section>
+      <form id="get-scheme">
+        <input
+          type="color"
+          name="color-input"
+          id="color-input"
+          value="#0DD2B2"
+        />
+        <select name="scheme-select" id="scheme-select">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-Complement</option>
+          <option value="triad">Triad</option>
+          <option value="quad">Quad</option>
+        </select>
+        <button>Get color scheme</button>
+      </form>
+    </section>
+    <section id="scheme-display">
+      <figure id="scheme-display--color0" class="color-display">
+        <h3 id="scheme-display--label0"></h3>
+        <figcaption id="scheme-display--name0"></figcaption>
+      </figure>
+      <figure id="scheme-display--color1" class="color-display">
+        <h3 id="scheme-display--label1"></h3>
+        <figcaption id="scheme-display--name1"></figcaption>
+      </figure>
+      <figure id="scheme-display--color2" class="color-display">
+        <h3 id="scheme-display--label2"></h3>
+        <figcaption id="scheme-display--name2"></figcaption>
+      </figure>
+      <figure id="scheme-display--color3" class="color-display">
+        <h3 id="scheme-display--label3"></h3>
+        <figcaption id="scheme-display--name3"></figcaption>
+      </figure>
+      <figure id="scheme-display--color4" class="color-display">
+        <h3 id="scheme-display--label4"></h3>
+        <figcaption id="scheme-display--name4"></figcaption>
+      </figure>
+    </section>
+    <script src="renderer.js"></script>
+  </body>
+</html>

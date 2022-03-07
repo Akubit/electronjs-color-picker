@@ -1,0 +1,34 @@
+body {
+  background: $light-background;
+  color: $light-text;
+}
+
+form {
+  * {
+    background-color: $light-button;
+  }
+}
+
+#options {
+  background-color: $light-button;
+  select {
+    background-color: $light-background;
+  }
+  #theme-switch {
+    input {
+      &:checked + #switch {
+        background-color: $light-background;
+      }
+      &:focus + #switch {
+        box-shadow: 0 0 1px $light-background;
+      }
+    }
+  }
+  #switch {
+    background-color: $light-background;
+    &:before {
+      background-color: $light-button;
+      content: "\ee7e";
+    }
+  }
+}

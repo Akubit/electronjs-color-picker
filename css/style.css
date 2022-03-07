@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+.light-color {
+  color: #fff; }
+
+.dark-color {
+  color: #2b283a; }
+
+html,
+body,
+input,
+select,
+button {
+  font-family: "Space Mono", ipm, Menlo, "Courier New", monospace;
+  font-size: calc(0.3vmin + 0.75rem);
+  box-sizing: border-box; }
+  html,
+  html h1,
+  html h2,
+  body,
+  body h1,
+  body h2,
+  input,
+  input h1,
+  input h2,
+  select,
+  select h1,
+  select h2,
+  button,
+  button h1,
+  button h2 {
+    font-weight: 400; }
+
+body {
+  height: 100vh;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; }
+
+select,
+button {
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em 1em;
+  letter-spacing: 1px;
+  cursor: pointer; }
+
+button {
+  font-weight: 700; }
+
+#options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vmin 2vmin; }
+  #options #theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px; }
+    #options #theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0; }
+      #options #theme-switch input:checked + #switch:before {
+        transform: translateX(26px); }
+  #options #switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    transition: 0.4s; }
+    #options #switch:before {
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "icofont";
+      font-size: 20px;
+      border-radius: 50%;
+      transition: 0.4s;
+      color: goldenrod; }
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-gap: 15px;
+  margin: 1vmin 2vmin; }
+  form #color-name {
+    margin: 0; }
+  form #scheme-select {
+    font-size: 1.25em; }
+
+#color-input {
+  width: 100%;
+  height: 50px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0; }
+
+::-webkit-color-swatch-wrapper {
+  padding: 0; }
+
+::-webkit-color-swatch {
+  border-radius: 5px;
+  border: none; }
+
+figure {
+  margin: 0;
+  display: grid;
+  align-content: end;
+  align-items: baseline;
+  text-align: center;
+  width: 100%;
+  height: 75vh; }
+  figure h4 {
+    margin: 0.5em 0.5em 0;
+    min-height: 2em; }
+  figure figcaption {
+    min-height: 15vh; }
+
+#scheme-display {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1f2937;
+    color: #d5d4d8; }
+  form * {
+    background-color: #3d4b60;
+    color: #d5d4d8; }
+  #options {
+    background-color: #3d4b60; }
+    #options select {
+      background-color: #1f2937;
+      color: #d5d4d8; }
+    #options #theme-switch input:checked + #switch {
+      background-color: #1f2937; }
+    #options #theme-switch input:focus + #switch {
+      box-shadow: 0 0 1px #1f2937; }
+    #options #switch {
+      background-color: #1f2937; }
+      #options #switch:before {
+        background-color: #3d4b60;
+        content: "\ef9e"; } }
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: #2b283a; }
+  form * {
+    background-color: #d1d5db; }
+  #options {
+    background-color: #d1d5db; }
+    #options select {
+      background-color: #fff; }
+    #options #theme-switch input:checked + #switch {
+      background-color: #fff; }
+    #options #theme-switch input:focus + #switch {
+      box-shadow: 0 0 1px #fff; }
+    #options #switch {
+      background-color: #fff; }
+      #options #switch:before {
+        background-color: #d1d5db;
+        content: "\ee7e"; } }

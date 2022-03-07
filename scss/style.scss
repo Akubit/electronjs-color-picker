@@ -1,0 +1,12 @@
+@import "variables";
+@import "global";
+
+@media (prefers-color-scheme: dark) {
+  @import "dark";
+}
+
+@media (prefers-color-scheme: light) {
+  @import "light";
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");

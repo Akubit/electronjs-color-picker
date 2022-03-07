@@ -1,0 +1,36 @@
+body {
+  background: $dark-background;
+  color: $dark-text;
+}
+
+form {
+  * {
+    background-color: $dark-button;
+    color: $dark-text;
+  }
+}
+
+#options {
+  background-color: $dark-button;
+  select {
+    background-color: $dark-background;
+    color: $dark-text;
+  }
+  #theme-switch {
+    input {
+      &:checked + #switch {
+        background-color: $dark-background;
+      }
+      &:focus + #switch {
+        box-shadow: 0 0 1px $dark-background;
+      }
+    }
+  }
+  #switch {
+    background-color: $dark-background;
+    &:before {
+      background-color: $dark-button;
+      content: "\ef9e";
+    }
+  }
+}

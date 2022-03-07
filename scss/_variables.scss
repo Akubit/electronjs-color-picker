@@ -1,0 +1,20 @@
+$dark-background: #1f2937;
+$dark-text: #d5d4d8;
+$dark-button: #3d4b60;
+
+$light-background: #fff;
+$light-text: #2b283a;
+$light-button: #d1d5db;
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+.light-color {
+  color: $light-background;
+}
+
+.dark-color {
+  color: $light-text;
+}
